@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane id="AnchorPane" prefHeight="604.0" prefWidth="916.0" style="-fx-background-color: #A2D2FF;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="juego.FXMLDocumentController">
+    <children>
+        <Button id="play" fx:id="button" focusTraversable="false" graphicTextGap="52.0" layoutX="417.0" layoutY="373.0" onAction="#handleButtonAction" prefHeight="57.0" prefWidth="83.0" style="-fx-background-color: #FFC8DD;" text="Play" textAlignment="CENTER" textOverrun="CLIP">
+            <font>
+                <Font name="Baskerville Old Face" size="35.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="DEFAULT" />
+            </cursor>
+        </Button>
+        <TextFlow layoutX="148.0" layoutY="114.0" prefHeight="30.0" prefWidth="621.0" textAlignment="CENTER">
+            <children>
+                <Text fill="#000000fe" strokeLineCap="BUTT" strokeType="OUTSIDE" strokeWidth="0.0" text="¡Bienvenido a Histoty Odyssey" textAlignment="CENTER" wrappingWidth="268.9557189941406">
+                    <font>
+                        <Font name="System Bold" size="36.0" />
+                    </font>
+                </Text>
+            </children>
+        </TextFlow>
+        <TextFlow layoutX="148.0" layoutY="236.0" prefHeight="30.0" prefWidth="621.0" textAlignment="CENTER">
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ingrese su nombre" wrappingWidth="268.9557189941406">
+                    <font>
+                        <Font name="System Bold" size="23.0" />
+                    </font>
+                </Text>
+            </children>
+        </TextFlow>
+        <TextField id="NameText" fx:id="Text" alignment="TOP_CENTER" cache="true" layoutX="316.0" layoutY="289.0" prefHeight="26.0" prefWidth="285.0" style="-fx-background-color: #BDE0FE;">
+            <cursor>
+                <Cursor fx:constant="DEFAULT" />
+            </cursor>
+        </TextField>
+    </children>
+    <opaqueInsets>
+        <Insets />
+    </opaqueInsets>
+</AnchorPane>
