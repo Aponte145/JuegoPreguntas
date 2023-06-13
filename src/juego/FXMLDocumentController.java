@@ -15,8 +15,11 @@ import javafx.scene.text.Text;
 import juego.Contralador.LogicaJuego;
 
 /**
- *
- * @author Oscar Aponte
+ * Controlador de la interfaz gráfica FXMLDocument.fxml.
+ * Se encarga de manejar los eventos de los elementos de la interfaz y llamar a la lógica del juego.
+ * 
+ *  * @authors Oscar Aponte, Lizeth Arango, Sergio Hernandez, Cristian Ortiz, Laura
+ * Bernal
  */
 public class FXMLDocumentController implements Initializable {
 
@@ -25,6 +28,12 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private Button button;
 
+    /**
+     * Maneja el evento del botón.
+     * Se llama cuando se hace clic en el botón.
+     * Inicia el juego, crea un nuevo jugador con el nombre proporcionado y lo registra en la lógica del juego.
+     * @param event El evento del botón.
+     */
     @FXML
     private void handleButtonAction(ActionEvent event) {
 

@@ -9,10 +9,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import juego.Contralador.LogicaJuego;
+
 /**
  *
- * @author Oscar Aponte
+ * @author Oscar Aponte, Lizeth Arango, Sergio Hernandez, Cristian Ortiz, Laura
+ * Bernal
  */
 public class Juego extends Application {
     

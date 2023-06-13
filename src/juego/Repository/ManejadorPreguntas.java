@@ -12,8 +12,11 @@ import java.util.Random;
 import juego.Modelo.PreguntasModel;
 
 /**
- *
- * @author Oscar Aponte
+ * La clase ManejadorPreguntas se encarga de administrar las preguntas del juego.
+ * Permite agregar preguntas, seleccionar una pregunta aleatoria y procesar la respuesta del jugador.
+ * 
+ * @author Oscar Aponte, Lizeth Arango, Sergio Hernandez, Cristian Ortiz, Laura
+ * Bernal
  */
 public class ManejadorPreguntas {
 
@@ -24,12 +27,19 @@ public class ManejadorPreguntas {
         preguntas = new ArrayList<>();
 
     }
-
+    /**
+     * Agrega una pregunta al listado de preguntas.
+     * @param pregunta La pregunta a agregar.
+     */
     public void addPregunta(PreguntasModel pregunta) {
 
         preguntas.add(pregunta);
     }
-
+    
+    /**
+     * Prepara las preguntas del juego agregando las preguntas al listado.
+     * Cada pregunta se crea con su enunciado, opciones y respuesta correcta.
+     */
     public void preparaPregunta() {
 
         // Pregunta 0 
@@ -107,7 +117,10 @@ public class ManejadorPreguntas {
 
    
     }
-
+    /**
+     * Selecciona una pregunta aleatoria del listado de preguntas.
+     * @return La pregunta seleccionada.
+     */
     public PreguntasModel asignarPregunta() {
 
         PreguntasModel PreguntaSeleccionada = new PreguntasModel();
@@ -119,7 +132,12 @@ public class ManejadorPreguntas {
         return new PreguntasModel(PreguntaSeleccionada.getId(), PreguntaSeleccionada.getPregunta(), PreguntaSeleccionada.getOpciones());
 
     }
-
+    
+    /**
+     * Obtiene la pregunta correspondiente a la respuesta proporcionada por el jugador.
+     * @param preguntaSeleccionada La pregunta seleccionada por el jugador.
+     * @return La pregunta completa con la respuesta correcta.
+     */
     private PreguntasModel respuestaCorrecta(PreguntasModel PreguntaSeleccionada) {
 
         for (PreguntasModel pregunta : preguntas) {
@@ -130,7 +148,12 @@ public class ManejadorPreguntas {
         }
         return null;
     }
-
+    /**
+     * Procesa la respuesta del jugador, eliminando la pregunta del listado y devolviendo la pregunta con la respuesta correcta.
+     * @param PreguntaSeleccionada La pregunta seleccionada por el jugador.
+     * @return La pregunta completa con la respuesta correcta.
+     */
+    
     public PreguntasModel procesarRespuesta(PreguntasModel PreguntaSeleccionada) {
 
         PreguntasModel respuesta = respuestaCorrecta(PreguntaSeleccionada);
@@ -139,6 +162,11 @@ public class ManejadorPreguntas {
         return respuesta;
 
     }
+
+     /**
+     * Elimina una pregunta del listado de preguntas.
+     * @param id El ID de la pregunta a eliminar.
+     */    
 
     private void deletePregunta(int id) {
         Iterator<PreguntasModel> iterator = preguntas.iterator();
@@ -149,10 +177,6 @@ public class ManejadorPreguntas {
                 break;
             }
         }
-    }
-    
-    public List<PreguntasModel> getPreguntas(){
-        return this.preguntas;
     }
 
 }
