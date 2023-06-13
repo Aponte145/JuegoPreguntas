@@ -5,6 +5,7 @@
 package juego.Modelo;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  *
@@ -74,6 +75,36 @@ public class PreguntasModel {
 
     public void setRespuestaCorrecta(String RespuestaCorrecta) {
         this.RespuestaCorrecta = RespuestaCorrecta;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 37 * hash + Objects.hashCode(this.Pregunta);
+        hash = 37 * hash + Objects.hashCode(this.Opciones);
+        return hash;
+    }
+    
+   
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final PreguntasModel other = (PreguntasModel) obj;
+        
+        if (!Objects.equals(this.Pregunta, other.Pregunta)) {
+            return false;
+        }
+        
+        return Objects.equals(this.Opciones, other.Opciones);
     }
     
 

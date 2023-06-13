@@ -150,5 +150,9 @@ public class ManejadorPreguntas {
             }
         }
     }
+    
+    public List<PreguntasModel> getPreguntas(){
+        return this.preguntas;
+    }
 
 }
