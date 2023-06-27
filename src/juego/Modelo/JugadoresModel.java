@@ -4,6 +4,8 @@
  */
 package juego.Modelo;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.Date;
 
 /**
@@ -47,6 +49,24 @@ public class JugadoresModel {
     public JugadoresModel(String nameJugado, int puntaje) {
         this.nameJugado = nameJugado;
         this.puntaje = puntaje;
+    }
+     /**
+     * Constructor de la clase JugadoresModel.
+     *Constructor sin argumentos
+     */
+    public JugadoresModel() {
+
+    }
+    
+      @JsonCreator
+    public JugadoresModel(@JsonProperty("id") int id,
+                          @JsonProperty("nameJugado") String nameJugado,
+                          @JsonProperty("puntaje") int puntaje,
+                          @JsonProperty("fecha") Date fecha) {
+        this.id = id;
+        this.nameJugado = nameJugado;
+        this.puntaje = puntaje;
+        this.fecha = fecha;
     }
 
     /**

@@ -20,7 +20,7 @@ import juego.Modelo.PreguntasModel;
  */
 public class ManejadorPreguntas {
 
-    private final List<PreguntasModel> preguntas;
+    private static List<PreguntasModel> preguntas;
 
     public ManejadorPreguntas() {
 
@@ -43,77 +43,93 @@ public class ManejadorPreguntas {
     public void preparaPregunta() {
 
         // Pregunta 0 
-        addPregunta(new PreguntasModel("Que es POO",
-                Arrays.asList("Programación Orientada a Objetos",
-                        "Paradigma de Programación", "Modularidad y Reutilización de Código",
-                        "Flexibilidad y Mantenibilidad del Sistema"),
-                "Programación Orientada a Objetos"));
+        addPregunta(new PreguntasModel("¿En qué año colapsó la Unión Soviética? ",
+                Arrays.asList(
+                        "1991",
+                        "1982",
+                        "1998",
+                        "1973"),
+                "1991", 
+        "archivos/pregunta1.jpg"));
         // Pregunta 1
-        addPregunta(new PreguntasModel("Pilares Fundamentales POO",
-                Arrays.asList("Mensajes, Comportamientos, Interacción, Composición",
-                        "Modularidad, Reutilización de Código, Flexibilidad, Mantenibilidad",
-                        "Clases, Objetos, Métodos, Atributos", "Abstracción, Encapsulamiento, Herencia, Polimorfismo"),
-                "Abstracción, Encapsulamiento, Herencia, Polimorfismo"));
-        // Pregunta 2
-        preguntas.add(new PreguntasModel("Ejemplo de herencia en Java",
-                Arrays.asList("Herencia simple", "Herencia múltiple", "Herencia híbrida", "Herencia múltiple y híbrida"),
-                "Herencia simple"));
+        addPregunta(new PreguntasModel("¿Cuál fue el primer metal que el hombre empleó?",
+                Arrays.asList(
+                        "Oro",
+                        "Platino",
+                        "Cobre",
+                        "Diamante"),
+                "Cobre",
+        "archivos/Pregunta2.jpg"));
+        // Pregunta 2       
+        preguntas.add(new PreguntasModel("¿A través de qué río africano se alzó el antiguo Egipto?",
+                Arrays.asList("Tigris", 
+                        "Okavango",
+                        "Éufrates",
+                        "Nilo"),
+                "Nilo", "archivos/Pregunta3.jpg"));
 
         // Pregunta 3
-        preguntas.add(new PreguntasModel("¿Qué es la encapsulación en POO?",
-                Arrays.asList("La capacidad de un objeto para ocultar su implementación interna y exponer solo una interfaz",
-                        "La capacidad de un objeto para heredar propiedades y comportamientos de otro objeto",
-                        "La capacidad de un objeto para tener múltiples formas o comportamientos en función del contexto",
-                        "La capacidad de un objeto para agrupar datos y comportamientos relacionados"),
-                "La capacidad de un objeto para ocultar su implementación interna y exponer solo una interfaz"));
+        preguntas.add(new PreguntasModel("¿Cuáles de estos hechos históricos es más antiguo?",
+                Arrays.asList(
+                        "Nacimiento de Confucio",
+                        "Nacimiento de Alejandro Magno",
+                        "Construcción de la Gran Muralla China",
+                        "La caída de Tenochtitlán"),
+                "Nacimiento de Confucio", "archivos/Pregunta4.jpg"));
 
         // Pregunta 4
-        preguntas.add(new PreguntasModel("¿Cuál de las siguientes opciones describe mejor el polimorfismo en POO?",
-                Arrays.asList("La capacidad de un objeto para ocultar su implementación interna y exponer solo una interfaz",
-                        "La capacidad de un objeto para tener múltiples formas o comportamientos en función del contexto",
-                        "La capacidad de un objeto para agrupar datos y comportamientos relacionados",
-                        "La capacidad de un objeto para heredar propiedades y comportamientos de otro objeto"),
-                "La capacidad de un objeto para tener múltiples formas o comportamientos en función del contexto"));
+        preguntas.add(new PreguntasModel("¿En que periodo de la historia tuvo lugar la guerra de los cien años?",
+                Arrays.asList(
+                        "Edad Antigua",
+                        "Edad del hierro",
+                        "Edad Media",
+                        "Edad Moderna"),
+                "Edad Media", "archivos/Pregunta5.jpg"));
 
         // Pregunta 5
-        preguntas.add(new PreguntasModel("¿Qué elementos crees que definen a un objeto?",
-                Arrays.asList("Sus cardinalidad y su tipo",
-                        "Sus atributos y sus métodos",
-                        "La forma en que establece comunicación e intercambia mensaje",
-                        "Su interfaz y los eventos asociado"),
-                "Sus atributos y sus métodos"));
+        preguntas.add(new PreguntasModel("¿En qué año se presentó el accidente nuclear de Chernóbil?",
+                Arrays.asList(
+                        "1960",
+                        "1980",
+                        "1986",
+                        "1994"),
+                "1986", "archivos/Pregunta6.jpg"));
 
         // Pregunta 6
-        preguntas.add(new PreguntasModel("¿Qué código de los siguientes tiene que ver con la herencia?",
-                Arrays.asList("public class Componente extends Producto",
-                        "public class Componente inherit Producto",
-                        "public class Componente implements Producto",
-                        "public class Componente belong to Producto"),
-                "public class Componente extends Producto"));
+        preguntas.add(new PreguntasModel("¿Dónde se inventó la rueda?",
+                Arrays.asList(
+                        "Mesopotamia",
+                        "Egipto",
+                        "Grecia",
+                        "China"),
+                "Mesopotamia", "archivos/Pregunta7.jpg"));
 
         // Pregunta 7
-        preguntas.add(new PreguntasModel("¿Qué significa instanciar una clase?",
-                Arrays.asList("Duplicar una clase",
-                        "Eliminar una clase",
-                        "Crear un objeto a partir de la clase",
-                        "Conectar dos clases entre sí"),
-                "Crear un objeto a partir de la clase"));
+        preguntas.add(new PreguntasModel("¿Cuál fue la primera civilización en la historia de la humanidad?",
+                Arrays.asList(
+                        "Los fenicios",
+                        "La Antigua Grecia",
+                        "La Antigua Roma",
+                        "La civilización sumeria"),
+                "La civilización sumeria", "archivos/Pregunta8.jpg"));
 
         // Pregunta 8
-        preguntas.add(new PreguntasModel("¿Qué significa sobrecargar (overload) un método?",
-                Arrays.asList("Editarlo para modificar su comportamiento",
-                        "Cambiarle el nombre dejándolo con la misma funcionalidad",
-                        "Crear un método con el mismo nombre pero diferentes argumentos",
-                        "Añadirle funcionalidades a un método"),
-                "Crear un método con el mismo nombre pero diferentes argumentos"));
+        preguntas.add(new PreguntasModel("¿Quién dirigió la Revolución francesa?",
+                Arrays.asList(
+                        "Luis XV de Francia",
+                        "Jean-Paul Marat",
+                        "Maximilien de Robespierre",
+                        "Napoleón Bonaparte"),
+                "Jean-Paul Marat", "archivos/Pregunta9.jpg"));
 
         // Pregunta 9
-        preguntas.add(new PreguntasModel("¿Qué es una excepción?",
-                Arrays.asList("Un objeto que no puede ser instanciado",
-                        "Un bucle que no finaliza",
-                        "Un error que lanza un método cuando algo va mal",
-                        "Un tipo de evento muy utilizado al crear interfaces"),
-                "Un error que lanza un método cuando algo va mal"));
+        preguntas.add(new PreguntasModel("¿Qué países colonizaron Estados Unidos?",
+                Arrays.asList(
+                        "España",
+                        "Inglaterra",
+                        "Países Bajos",
+                        "Francia"),
+                "Inglaterra", "archivos/Pregunta10.jpg"));
 
    
     }
@@ -122,15 +138,20 @@ public class ManejadorPreguntas {
      * @return La pregunta seleccionada.
      */
     public PreguntasModel asignarPregunta() {
+    PreguntasModel PreguntaSeleccionada = null;
+    Random random = new Random();
 
-        PreguntasModel PreguntaSeleccionada = new PreguntasModel();
-        Random random = new Random();
-
+    if (!preguntas.isEmpty()) {
         int randomIndex = random.nextInt(preguntas.size());
         PreguntaSeleccionada = preguntas.get(randomIndex);
+    }
 
-        return new PreguntasModel(PreguntaSeleccionada.getId(), PreguntaSeleccionada.getPregunta(), PreguntaSeleccionada.getOpciones());
-
+    if (PreguntaSeleccionada != null) {
+        return new PreguntasModel(PreguntaSeleccionada.getId(), PreguntaSeleccionada.getPregunta(), PreguntaSeleccionada.getOpciones(), PreguntaSeleccionada.getRutaImagen() );
+    } else {
+        // Manejar el caso en el que no haya preguntas disponibles
+        return null;
+    }
     }
     
     /**

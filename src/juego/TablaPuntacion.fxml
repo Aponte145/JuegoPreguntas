@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="430.0" prefWidth="730.0" style="-fx-background-color: #A2D2FF;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="juego.PuntacionFXMLController">
+   <TableView fx:id="tablaJugadores" layoutX="214.0" layoutY="68.0" prefHeight="294.0" prefWidth="302.0" style="-fx-background-color: #A2D2FF;">
+        <columns>
+            <TableColumn fx:id="columnaPuntuacion" prefWidth="150" text="Puntuación" />
+            <TableColumn fx:id="columnaNombre" prefWidth="150" text="Nombre" />
+        </columns>
+    </TableView>   
+</AnchorPane>

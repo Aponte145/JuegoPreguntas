@@ -6,6 +6,9 @@ package juego.Repository;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+
+
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -26,25 +29,29 @@ public class ManejadorJugador {
      * Si el archivo no existe, se crea.
      * @return La ruta del archivo de resultados.
      */
-    private static String rutaArchivo() {
+private static String rutaArchivo() {
+    String ruta = "src/archivos/resultados.json";
+    File archivo = new File(ruta);
+    System.out.println("Directorio actual: " + System.getProperty("user.dir"));
+    System.out.println("Ruta absoluta del archivo: " + archivo.getAbsolutePath());
 
-        File archivo = new File("archivos/resultados.json");
-
-        if (archivo.exists()) {
-            System.out.println("El archivo ya existe:  archivos/resultados.json");
-        } else {
-            try {
-                if (archivo.createNewFile()) {
-                    System.out.println("Se ha creado el archivo: archivos/resultados.json ");
-                } else {
-                    System.out.println("No se pudo crear el archivo: archivos/resultados.json ");
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
+    if (archivo.exists()) {
+        System.out.println("El archivo ya existe: " + ruta);
+    } else {
+        try {
+            if (archivo.createNewFile()) {
+                System.out.println("Se ha creado el archivo: " + ruta);
+            } else {
+                System.out.println("No se pudo crear el archivo: " + ruta);
             }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        return "archivos/resultados.json";
     }
+    
+    return ruta;
+}
+
 
     /**
      * Carga los resultados de los jugadores desde el archivo JSON.
@@ -101,6 +108,11 @@ public class ManejadorJugador {
     public JugadoresModel puntacion(JugadoresModel jugador, int puntaje) {
 
         jugador.setPuntaje(jugador.getPuntaje() + puntaje);
+        return jugador;
+    }
+    
+    public JugadoresModel resultadoPuntaje (JugadoresModel jugador){
+      
         return jugador;
     }
 

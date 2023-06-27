@@ -9,35 +9,28 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<AnchorPane id="AnchorPane" prefHeight="604.0" prefWidth="916.0" style="-fx-background-color: #A2D2FF;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="juego.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="429.0" prefWidth="701.0" style="-fx-background-color: #A2D2FF;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="juego.FXMLDocumentController">
     <children>
-        <Button id="play" fx:id="button" focusTraversable="false" graphicTextGap="52.0" layoutX="417.0" layoutY="373.0" onAction="#handleButtonAction" prefHeight="57.0" prefWidth="83.0" style="-fx-background-color: #FFC8DD;" text="Play" textAlignment="CENTER" textOverrun="CLIP">
+        <Button id="play" fx:id="button" contentDisplay="TOP" focusTraversable="false" graphicTextGap="12.0" layoutX="308.0" layoutY="290.0" nodeOrientation="RIGHT_TO_LEFT" onAction="#handleButtonAction" prefHeight="57.0" prefWidth="83.0" style="-fx-background-color: #FFC8DD;" text="Play" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS">
             <font>
-                <Font name="Baskerville Old Face" size="35.0" />
+                <Font name="Arial" size="11.0" />
             </font>
             <cursor>
                 <Cursor fx:constant="DEFAULT" />
             </cursor>
         </Button>
-        <TextFlow layoutX="148.0" layoutY="114.0" prefHeight="30.0" prefWidth="621.0" textAlignment="CENTER">
-            <children>
-                <Text fill="#000000fe" strokeLineCap="BUTT" strokeType="OUTSIDE" strokeWidth="0.0" text="¡Bienvenido a Histoty Odyssey" textAlignment="CENTER" wrappingWidth="268.9557189941406">
-                    <font>
-                        <Font name="System Bold" size="36.0" />
-                    </font>
-                </Text>
-            </children>
-        </TextFlow>
-        <TextFlow layoutX="148.0" layoutY="236.0" prefHeight="30.0" prefWidth="621.0" textAlignment="CENTER">
-            <children>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ingrese su nombre" wrappingWidth="268.9557189941406">
-                    <font>
-                        <Font name="System Bold" size="23.0" />
-                    </font>
-                </Text>
-            </children>
-        </TextFlow>
-        <TextField id="NameText" fx:id="Text" alignment="TOP_CENTER" cache="true" layoutX="316.0" layoutY="289.0" prefHeight="26.0" prefWidth="285.0" style="-fx-background-color: #BDE0FE;">
+        <TextFlow layoutX="19.0" layoutY="84.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="30.0" prefWidth="621.0" textAlignment="CENTER" />
+          <Text fill="#000000fe" layoutX="13.0" layoutY="129.0" nodeOrientation="RIGHT_TO_LEFT" strokeLineCap="BUTT" strokeType="OUTSIDE" strokeWidth="0.0" text="¡Bienvenido a Histoty Odyssey" textAlignment="CENTER" wrappingWidth="632.9557189941406">
+              <font>
+                  <Font name="System Bold" size="36.0" />
+              </font>
+          </Text>
+          <Text layoutX="196.0" layoutY="189.0" nodeOrientation="RIGHT_TO_LEFT" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingrese su nombre" textAlignment="CENTER" wrappingWidth="268.9557189941406">
+              <font>
+                  <Font name="System Bold" size="23.0" />
+              </font>
+          </Text>
+        <TextField id="NameText" fx:id="Text" alignment="TOP_CENTER" cache="true" layoutX="75.0" layoutY="239.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="26.0" prefWidth="548.0" style="-fx-background-color: #BDE0FE;">
             <cursor>
                 <Cursor fx:constant="DEFAULT" />
             </cursor>

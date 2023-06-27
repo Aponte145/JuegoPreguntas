@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="429.0" prefWidth="700.0" style="-fx-background-color: #A2D2FF;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="juego.PuntacionFXMLController">
+      <children>
+      <Text fill="#000000fe" layoutX="33.0" layoutY="63.0" strokeLineCap="BUTT" strokeType="OUTSIDE" strokeWidth="0.0" text="Juego Completado" textAlignment="CENTER" wrappingWidth="632.9557189941406">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Text>
+      <Text fill="#000000fe" layoutX="34.0" layoutY="123.0" strokeLineCap="BUTT" strokeType="OUTSIDE" strokeWidth="0.0" text="Puntacion" textAlignment="CENTER" wrappingWidth="632.9557189941407">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Label id="puntaje" fx:id="puntajeLabel" layoutX="276.0" layoutY="171.0" prefHeight="27.0" prefWidth="146.0" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button id="btntabla" fx:id="btntabla" layoutX="287.0" layoutY="268.0" mnemonicParsing="false" onAction="#handleTablaButtonAction" text="Tabla de Calificacion" />
+   </children> 
+</AnchorPane>

@@ -21,6 +21,7 @@ public class PreguntasModel {
     private String Pregunta; // La pregunta
     private List<String> Opciones; // Opciones de respuesta
     private String RespuestaCorrecta; // Respuesta correcta
+    private String RutaImagen;
 
     /**
      * Constructor de la clase PreguntasModel.
@@ -28,13 +29,15 @@ public class PreguntasModel {
      * @param Pregunta La pregunta.
      * @param Opciones Las opciones de respuesta.
      * @param RespuestaCorrecta La respuesta correcta.
+     * @param RutaImagen la ruta de la imagen
      */
-    public PreguntasModel(String Pregunta, List<String> Opciones, String RespuestaCorrecta) {
+    public PreguntasModel(String Pregunta, List<String> Opciones, String RespuestaCorrecta,String RutaImagen ) {
         this.id = nextId; // Asignar el identificador único
         nextId++; // Incrementar el identificador para la siguiente pregunta
         this.Pregunta = Pregunta;
         this.Opciones = Opciones;
         this.RespuestaCorrecta = RespuestaCorrecta;
+        this.RutaImagen =  RutaImagen;
     }
 
     /**
@@ -50,11 +53,13 @@ public class PreguntasModel {
      * @param id El identificador de la pregunta.
      * @param Pregunta La pregunta.
      * @param Opciones Las opciones de respuesta.
+     * @param RutaImagen la ruta de la imagen
      */
-    public PreguntasModel(int id, String Pregunta, List<String> Opciones) {
+    public PreguntasModel(int id, String Pregunta, List<String> Opciones, String RutaImagen) {
         this.id = id;
         this.Pregunta = Pregunta;
         this.Opciones = Opciones;
+        this.RutaImagen =  RutaImagen;
     }
 
     /**
@@ -127,5 +132,13 @@ public class PreguntasModel {
      */
     public void setRespuestaCorrecta(String RespuestaCorrecta) {
         this.RespuestaCorrecta = RespuestaCorrecta;
+    }
+    
+    public String getRutaImagen() {
+        return RutaImagen;
+    }
+
+    public void setRutaImagen(String RutaImagen) {
+        this.RutaImagen = RutaImagen;
     }
 }
