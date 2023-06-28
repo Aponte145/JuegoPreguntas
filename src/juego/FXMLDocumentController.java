@@ -23,8 +23,7 @@ import juego.Modelo.JugadoresModel;
  * Controlador de la interfaz gráfica FXMLDocument.fxml.
  * Se encarga de manejar los eventos de los elementos de la interfaz y llamar a la lógica del juego.
  * 
- *  * @authors Oscar Aponte, Lizeth Arango, Sergio Hernandez, Cristian Ortiz, Laura
- * Bernal
+ * Autores: Oscar Aponte, Lizeth Arango, Sergio Hernandez, Cristian Ortiz, Laura Bernal
  */
 public class FXMLDocumentController implements Initializable {
 
@@ -68,14 +67,10 @@ public class FXMLDocumentController implements Initializable {
                 e.printStackTrace();
             }
         }
-        }
-        
-
-    
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }
-
 }

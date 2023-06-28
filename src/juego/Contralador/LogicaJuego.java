@@ -12,27 +12,23 @@ import juego.Modelo.JugadoresModel;
 import juego.Modelo.PreguntasModel;
 
 /**
- * La clase LogicaJuego se encarga de la lógica del juego. Controla la
- * preparación de preguntas, la creación de jugadores, la asignación de
- * preguntas y la calificación de las respuestas de los jugadores.
- *
- * @author Oscar Aponte, Lizeth Arango, Sergio Hernandez, Cristian Ortiz, Laura
- * Bernal
+ * La clase LogicaJuego se encarga de la lógica del juego. Controla la preparación de preguntas, 
+ * la creación de jugadores, la asignación de preguntas y la calificación de las respuestas de los jugadores.
+ * La lógica del juego se implementa en esta clase.
+ * Autor: Oscar Aponte, Lizeth Arango, Sergio Hernandez, Cristian Ortiz, Laura Bernal
  */
 public class LogicaJuego {
 
-    private static ManejadorPreguntas manejadorPreguntas;
-    private static ManejadorJugador manejadorjugador;
-    private static JugadoresModel jugador;
+    private static ManejadorPreguntas manejadorPreguntas; // Manejador de preguntas
+    private static ManejadorJugador manejadorjugador; // Manejador de jugadores
+    private static JugadoresModel jugador; // Jugador actual
 
     /**
      * Inicia el juego, preparando las preguntas.
      */
     public void iniciarJuego() {
-
-        manejadorPreguntas = new ManejadorPreguntas();
-        manejadorPreguntas.preparaPregunta();
-
+        manejadorPreguntas = new ManejadorPreguntas(); // Inicializar el manejador de preguntas
+        manejadorPreguntas.preparaPregunta(); // Preparar las preguntas
     }
 
     /**
@@ -42,9 +38,8 @@ public class LogicaJuego {
      * @return El objeto JugadoresModel del jugador creado.
      */
     public JugadoresModel crearjugador(String name) {
-        manejadorjugador = new ManejadorJugador();
-        jugador = manejadorjugador.crearJugador(name);
-
+        manejadorjugador = new ManejadorJugador(); // Inicializar el manejador de jugadores
+        jugador = manejadorjugador.crearJugador(name); // Crear el jugador utilizando el manejador
         return jugador;
     }
 
@@ -54,9 +49,7 @@ public class LogicaJuego {
      * @return La pregunta asignada.
      */
     public PreguntasModel asignarPregunta() {
-
-        return manejadorPreguntas.asignarPregunta();
-
+        return manejadorPreguntas.asignarPregunta(); // Asignar una pregunta al azar utilizando el manejador
     }
 
     /**
@@ -65,36 +58,36 @@ public class LogicaJuego {
      * @param PreguntaSeleccionada La pregunta seleccionada por el jugador.
      * @param respuesta La respuesta proporcionada por el jugador.
      * @param jugador El objeto JugadoresModel del jugador.
-     * @return Un objeto Pair que contiene la pregunta con la respuesta correcta
-     * y un valor booleano que indica si la respuesta fue correcta.
+     * @return Un objeto Pair que contiene la pregunta con la respuesta correcta y un valor booleano que indica si la respuesta fue correcta.
      */
     public Pair<PreguntasModel, Boolean> califcicarRespuesta(PreguntasModel PreguntaSeleccionada, String respuesta, JugadoresModel jugador) {
-
         boolean resultadoRespuesta = false;
-        PreguntasModel respuestaCorrecta = manejadorPreguntas.procesarRespuesta(PreguntaSeleccionada);
+        PreguntasModel respuestaCorrecta = manejadorPreguntas.procesarRespuesta(PreguntaSeleccionada); // Obtener la respuesta correcta de la pregunta seleccionada
 
         if (respuestaCorrecta.getRespuestaCorrecta().equals(respuesta)) {
-            jugador = manejadorjugador.puntacion(jugador, 10);
+            jugador = manejadorjugador.puntacion(jugador, 10); // Incrementar la puntuación del jugador en 10 si la respuesta es correcta
             resultadoRespuesta = true;
         }
 
-        return new Pair<>(respuestaCorrecta, resultadoRespuesta);
-
+        return new Pair<>(respuestaCorrecta, resultadoRespuesta); // Devolver un objeto Pair con la pregunta y la respuesta correcta, y el resultado de la respuesta del jugador
     }
 
+    /**
+     * Consulta la puntuación del jugador actual.
+     *
+     * @return El objeto JugadoresModel con la puntuación del jugador.
+     */
     public JugadoresModel cosultarPuntacion() {
-        
-        manejadorjugador.guardarResultado(jugador);
-
+        manejadorjugador.guardarResultado(jugador); // Guardar el resultado del jugador utilizando el manejador
         return jugador;
-
     }
     
-    
-    public List<JugadoresModel> consultarTabla()
-    {
-        return manejadorjugador.cargarResultados();
-        
+    /**
+     * Consulta la tabla de puntuaciones.
+     *
+     * @return Una lista de JugadoresModel con los resultados de los jugadores.
+     */
+    public List<JugadoresModel> consultarTabla() {
+        return manejadorjugador.cargarResultados(); // Cargar los resultados de los jugadores utilizando el manejador
     }
-
 }
